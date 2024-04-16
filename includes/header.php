@@ -1,4 +1,4 @@
-<?php  ?><section class=" w3l-header-4 header-sticky">
+<?php  session_start();?><section class=" w3l-header-4 header-sticky">
     <header class="absolute-top">
         <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">

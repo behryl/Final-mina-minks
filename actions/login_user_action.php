@@ -36,7 +36,7 @@ if(isset($_POST['login']))
     $query=mysqli_query($con,"select ID from tbluser where  (Email='$emailcon' || MobileNumber='$emailcon') && Password='$password' ");
     $ret=mysqli_fetch_array($query);
     // if($ret>0){
-        if($ret==0){
+        if($ret>0){
 
       $_SESSION['bpmsuid']=$ret['ID'];
      header('location:../index.php');

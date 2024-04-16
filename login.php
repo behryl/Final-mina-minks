@@ -3,27 +3,25 @@ ini_set('display_errors', 1);
 // ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// session_start();
+session_start();
 //error_reporting(0);
 include('includes/dbconnection.php');
 //error_reporting(0);
 
-// if(isset($_POST['login']))
-//   {
-//     $emailcon=$_POST['emailcont'];
-//     $password=md5($_POST['password']);
-//     $query=mysqli_query($con,"select ID from tbluser where  (Email='$emailcon' || MobileNumber='$emailcon') && Password='$password' ");
-//     $ret=mysqli_fetch_array($query);
-//     // if($ret>0){
-//         if($ret==0){
-
-//       $_SESSION['bpmsuid']=$ret['ID'];
-//      header('location:index.php');
-//     }
-//     else{
-//     echo "<script>alert('Invalid Details.');</script>";
-//     }
-//   }
+if(isset($_POST['login']))
+  {
+    $emailcon=$_POST['emailcont'];
+    $password=md5($_POST['password']);
+    $query=mysqli_query($con,"select ID from tbluser where  (Email='$emailcon' || MobileNumber='$emailcon') && Password='$password' ");
+    $ret=mysqli_fetch_array($query);
+    if($ret>0){
+      $_SESSION['bpmsuid']=$ret['ID'];
+     header('location:index.php');
+    }
+    else{
+    echo "<script>alert('Invalid Details.');</script>";
+    }
+  }
 ?>
 <!doctype html>
 <html lang="en">
@@ -130,7 +128,7 @@ while ($row=mysqli_fetch_array($ret)) {
                     </div>
                <?php } ?> </div>
                 <div class="map-content-9 mt-lg-0 mt-4">
-                    <form method="post" action="../Final-mina-minks/actions/login_user_action.php" name="loginForm">
+                    <form method="post"  name="loginForm">
                         <div>
                             <input type="text" class="form-control" name="emailcont" required="true" placeholder="Registered Email or Contact Number" required="true">
                            

@@ -38,7 +38,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="login.php">Login</a>
                     </li><?php }?>
-                    <?php if (strlen($_SESSION['bpmsuid']>0)) {?>
+                    <?php session_start(); if (strlen($_SESSION['bpmsuid']>0)) {?>
                     <li class="nav-item">
                         <a class="nav-link" href="book-appointment.php">Book Salon</a>
                     </li>

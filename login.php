@@ -14,7 +14,7 @@ if(isset($_POST['login']))
     $ret=mysqli_fetch_array($query);
     if($ret>0){
       $_SESSION['bpmsuid']=$ret['ID'];
-     header('location: index.php');
+     header('location: book-appointment.php');
     }
     else{
     echo "<script>alert('Invalid Details.');</script>";

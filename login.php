@@ -130,7 +130,7 @@ while ($row=mysqli_fetch_array($ret)) {
                     </div>
                <?php } ?> </div>
                 <div class="map-content-9 mt-lg-0 mt-4">
-                    <form method="post" action="../bpms/actions/login_user_action.php" name="loginForm">
+                    <form method="post" action="../Final-mina-minks/actions/login_user_action.php" name="loginForm">
                         <div>
                             <input type="text" class="form-control" name="emailcont" required="true" placeholder="Registered Email or Contact Number" required="true">
                            

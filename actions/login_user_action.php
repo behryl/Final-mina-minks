@@ -40,7 +40,7 @@ if(isset($_POST['login']))
         if($ret==0){
 
       $_SESSION['bpmsuid']=$ret['ID'];
-     header('location:../index.php');
+     header('location:s/index.php');
     }
     else{
     echo "<script>alert('Invalid Details.');</script>";

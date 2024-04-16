@@ -27,7 +27,7 @@ error_reporting(E_ALL);
 
 session_start();
 //error_reporting(0);
-include('includes/dbconnection.php');
+include('../includes/dbconnection.php');
 //error_reporting(0);
 
 if(isset($_POST['login']))

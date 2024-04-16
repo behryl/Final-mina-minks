@@ -1,4 +1,4 @@
-<?php session_start(); ?><section class=" w3l-header-4 header-sticky">
+<?php  ?><section class=" w3l-header-4 header-sticky">
     <header class="absolute-top">
         <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -28,7 +28,7 @@
                         <a class="nav-link" href="contact.php">Contact</a>
                     </li>
                      
-                     <?php if (strlen($_SESSION['bpmsuid']==0)) {?>
+                     <?php session_start(); if (strlen($_SESSION['bpmsuid']==0)) {?>
                     <li class="nav-item">
                         <a class="nav-link" href="admin/index.php">Admin</a>
                     </li>
@@ -38,7 +38,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="login.php">Login</a>
                     </li><?php }?>
-                    <?php if (strlen($_SESSION['bpmsuid']>0)) {?>
+                    <?php session_start(); if (strlen($_SESSION['bpmsuid']>0)) {?>
                     <li class="nav-item">
                         <a class="nav-link" href="book-appointment.php">Book Salon</a>
                     </li>

@@ -1,6 +1,6 @@
 <?php
 ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
+ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 session_start();
@@ -16,7 +16,7 @@ if(isset($_POST['login']))
     $ret=mysqli_fetch_array($query);
     if($ret>0){
       $_SESSION['bpmsuid']=$ret['ID'];
-     header('location:index.php');
+     header('location:../index.php');
     }
     else{
     echo "<script>alert('Invalid Details.');</script>";
@@ -128,7 +128,7 @@ while ($row=mysqli_fetch_array($ret)) {
                     </div>
                <?php } ?> </div>
                 <div class="map-content-9 mt-lg-0 mt-4">
-                    <form method="post"  name="loginForm">
+                    <form method="post" name="loginForm">
                         <div>
                             <input type="text" class="form-control" name="emailcont" required="true" placeholder="Registered Email or Contact Number" required="true">
                            

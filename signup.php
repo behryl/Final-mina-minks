@@ -32,6 +32,8 @@ if (isset($_POST['submit'])) {
             $query = mysqli_query($con, "INSERT INTO tbluser (FirstName, LastName, MobileNumber, Email, Password) VALUES ('$fname', '$lname', '$contno', '$email', '$password')");
             if ($query) {
                 echo "<script>alert('You have successfully registered.');</script>";
+                header('location: login.php');
+
             } else {
                 echo "<script>alert('Something went wrong. Please try again.');</script>";
             }

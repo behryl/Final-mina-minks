@@ -99,7 +99,7 @@ $(function () {
 		<div class="container">
 		
 				<div class="column2 image-text">
-					<h3 class="team-head ">Experience the Beauty of Mina Minks</h3>
+					<h3 class="team-head ">Feel the Beauty of Mina Minks</h3>
 					<p class="para  text ">
           Our lash artists are dedicated to crafting stunning lash designs tailored to your unique style, ensuring you leave feeling glamorous and new.</p>
 						<a href="book-appointment.php" class="btn logo-button top-margin mt-4">Book An Appointment</a>
